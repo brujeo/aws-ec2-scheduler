@@ -17,9 +17,9 @@ Edit config/schedule.yml file and set your schedules.
 Sample schedule job
 ```
 test001_job:
-    instance_id: i-941d3973
-    start: "57 15 * * *"
-    shutdown: "59 15 * * *"
+    instance_id: i-941d5871
+    start: "30 8 * * *"
+    shutdown: "30 17 * * *"
 ```
 
 Schedule string format
