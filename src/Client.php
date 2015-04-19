@@ -2,13 +2,35 @@
 
 namespace Brujeo\AWS\EC2;
 
+/**
+ * EC2 Client class
+ * 
+ * @author Leonid Brujev <brujev@gmail.com>
+ */
 class Client
 {
 	
+    /**
+     * aws client instance
+     * 
+     * @var \Aws\Ec2\Ec2Client
+     */
     protected $ec2client;
     
+    /**
+     * EC2 instances list
+     * 
+     * @var \Brujeo\AWS\EC2\Instance[]
+     */
     protected $instances = array();
     
+    /**
+     * Constructor
+     * 
+     * @param string $awsKey
+     * @param string $awsSecret
+     * @param string $awsRegion
+     */
     public function __construct($awsKey, $awsSecret, $awsRegion)
     {
         $this->ec2client = \Aws\Ec2\Ec2Client::factory(array(
@@ -20,6 +42,9 @@ class Client
         $this->loadAwsData();
     }
     
+    /**
+     * Loads EC2 instance details from AWS
+     */
 	protected function loadAwsData()
     {
       
@@ -56,11 +81,21 @@ class Client
         }
     }
     
+    /**
+     * Gets list of EC2 instances
+     * 
+     * @return \Brujeo\AWS\EC2\Instance[]
+     */
     public function getInstances()
     {
         return $this->instances;
     }
     
+    /**
+     * Gets list of active EC2 instances
+     * 
+     * @return \Brujeo\AWS\EC2\Instance[]
+     */
     public function getActiveInstances()
     {
         $instances = array();
@@ -72,6 +107,12 @@ class Client
         return $instances;
     }
     
+    /**
+     * Gets EC2 instance object by instance id
+     * 
+     * @param string $id
+     * @return \Brujeo\AWS\EC2\Instance
+     */
     public function getInstanceById($id)
     {
         foreach ($this->instances as $instance) {
@@ -81,6 +122,12 @@ class Client
         }
     }
     
+    /**
+     * Stops EC2 instance
+     * 
+     * @param \Brujeo\AWS\EC2\Instance $ec2instance
+     * @return string
+     */
     public function stopInstance(Instance $ec2instance)
     {
         $result = $this->ec2client->stopInstances(array(
@@ -91,6 +138,12 @@ class Client
         return $result;
     }
     
+    /**
+     * Starts EC2 instance
+     * 
+     * @param \Brujeo\AWS\EC2\Instance $ec2instance
+     * @return string
+     */
     public function startInstance(Instance $ec2instance)
     {
         $result = $this->ec2client->startInstances(array(

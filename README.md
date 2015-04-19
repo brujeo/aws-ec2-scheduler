@@ -34,3 +34,8 @@ Schedule string format
 |    +-------------------- hour (0 - 23)
 +------------------------- min (0 - 59)
 ```
+
+## Running scheduled tasks
+Add the following to your Crontab (crontab -e):
+
+* * * * * php /path/to/aws-ec2-scheduler/scheduler.cron.php > /dev/null 2>&1

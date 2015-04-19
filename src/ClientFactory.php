@@ -4,10 +4,25 @@ namespace Brujeo\AWS\EC2;
 
 use Symfony\Component\Yaml\Yaml;
 
+/**
+ * EC2 Client Factory class
+ * 
+ * @author Leonid Brujev <brujev@gmail.com>
+ */
 class ClientFactory
 {
+    /**
+     * EC2 client instance
+     * 
+     * @var Brujeo\AWS\EC2\Client
+     */
     public static $instance;
     
+    /**
+     * Gets EC2 client instance
+     * 
+     * @return Brujeo\AWS\EC2\Client
+     */
     public static function getClient()
     {
         if (!isset(self::$instance)) {

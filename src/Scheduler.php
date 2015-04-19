@@ -4,16 +4,31 @@ namespace Brujeo\AWS\EC2;
 
 use Cron\CronExpression;
 
+/**
+ * EC2 instance scheduler class
+ * 
+ * @author Leonid Brujev <brujev@gmail.com>
+ */
 class Scheduler
 {
     
     protected $scheduledTasks;
     
+    /**
+     * Constructor
+     * 
+     * @param array $scheduledTasks
+     */
     public function __construct(array $scheduledTasks)
     {
         $this->scheduledTasks = $scheduledTasks;
     }
    
+    /**
+     * Scheduler execution method
+     * 
+     * Loops through scheduled tasks and executes them sequentially
+     */
     public function run()
     {
         foreach ($this->scheduledTasks as $task) {

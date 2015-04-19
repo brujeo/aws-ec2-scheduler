@@ -1,4 +1,14 @@
 {
+    "name": "brujeo/aws-ec2-scheduler",
+    "type": "library",
+    "description": "Scheduler to launch and shutdown AWS EC2 instances on a regular basis",
+    "keywords": ["aws", "ec2", "schedule"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Leonid Brujev",
+        "email": "brujev@gmail.com",
+        "homepage": "https://github.com/brujeo"
+    }],
     "require": {
         "php": ">=5.4",
         "aws/aws-sdk-php": "2.7.*@dev",
