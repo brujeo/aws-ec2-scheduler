@@ -1,2 +1,21 @@
-## YAML Template.
+##########################################
+##					##	
+##      SCHEDULE FILE			##
+##					##
+## job_name:				##
+##     instance_id: XXXXXXXX		##
+##     start: "00 09 * * * *"		##
+##     shutdown: "00 18 * * * *"	##
+##					##
+##########################################
 ---
+
+test001_job:
+    instance_id: i-941d3973
+    start: "00 09 * * * *"
+    shutdown: "00 18 * * * *"
+    
+test002_job:
+    instance_id: i-941d3989
+    start: "30 08 * * * *"
+    shutdown: "30 17 * * * *"    
