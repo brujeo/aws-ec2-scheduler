@@ -37,5 +37,6 @@ Schedule string format
 
 ## Running scheduled tasks
 Add the following to your Crontab (crontab -e):
-
+```
 * * * * * php /path/to/aws-ec2-scheduler/scheduler.cron.php > /dev/null 2>&1
+```
