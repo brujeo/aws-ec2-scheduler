@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": ">=5.4",
+        "aws/aws-sdk-php": "2.7.*@dev",
+        "symfony/yaml": "2.1.*@dev",
+        "mtdowling/cron-expression": "1.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brujeo\\AWS\\EC2\\": "src/"
+        }
+    }
+}

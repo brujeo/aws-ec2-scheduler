@@ -1,0 +1,6 @@
+## Settings file
+---
+
+aws_key: XXxXXXXXXXXXXXXXXX
+aws_secret: XXXXXXXXXXXXXXXXXXXXXXX
+aws_region: eu-west-1
