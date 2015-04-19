@@ -24,12 +24,8 @@
 ##########################################################################
 ---
 
-test001_job:
-    instance_id: i-941d3973
-    start: "57 15 * * *"
-    shutdown: "59 15 * * *"
+##test001_job:
+##    instance_id: i-941d3973
+##    start: "30 8 * * *"
+##    shutdown: "30 17 * * *"
     
-test002_job:
-    instance_id: i-941d3989
-    start: "30 08 * * *"
-    shutdown: "30 17 * * *"    
